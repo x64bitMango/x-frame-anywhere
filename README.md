@@ -18,7 +18,7 @@ For small scale demos, projects and hobby sites, you can source use the raw GitH
    ```html
    <script type="module" src="https://raw.githubusercontent.com/x64bitMango/x-frame-anywhere/refs/heads/main/x-frame-anywhere.js"></script>
    ```
-### **2. Insert the X-Frame-Bypass Custom Element:**
+### **2. Insert the X-Frame-Anywhere Custom Element:**
    ```html
    <iframe is="x-frame-anywhere" src="https://example.org/"></iframe>
    ```
