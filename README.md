@@ -4,7 +4,7 @@
 
 X-Frame-Anywhere is a [Customized Built-in Element](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-customized-builtin-example), which extends an IFrame to bypass the [`X-Frame-Options: deny/sameorigin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) response header. Normally such headers prevent embedding a web page in an `<iframe>` element, but X-Frame-Anywhere uses a CORS proxy to allow this.
 
-Now.. this may look like a 1:1 copy of [Niutech's X-Frame-Bypass](https://github.com/niutech/x-frame-bypass), but it's really not. X-Frame-Anywhere is a personal, rewritten fork of Niutech's X-Frame-Bypass with a couple additional flexibility and debug options. But big honourable mention to them for the original.
+X-Frame-Anywhere is a personal, rewritten fork of [Niutech's X-Frame-Bypass](https://github.com/niutech/x-frame-bypass) but with a couple additional flexibility and debug options. Big honourable mention to them for the original repository.
 
 
 ## Usage
