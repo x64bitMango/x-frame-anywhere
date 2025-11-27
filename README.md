@@ -1,5 +1,10 @@
 # X-Frame-Anywhere
+
 [![Live Demo](https://img.shields.io/badge/Demo-_✦_Live-green)](https://x64bitmango.github.io/x-frame-anywhere/)
+![Open Issues](https://img.shields.io/github/issues/x64bitMango/x-frame-anywhere)
+![License](https://img.shields.io/github/license/x64bitMango/x-frame-anywhere)
+![Last Commit](https://img.shields.io/github/last-commit/x64bitMango/x-frame-anywhere)
+![Repo Size](https://img.shields.io/github/repo-size/x64bitMango/x-frame-anywhere)
 
 ## Synopsis
 X-Frame-Anywhere is a [Customized Built-in Element](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-customized-builtin-example), which extends an IFrame to bypass the [`X-Frame-Options: deny/sameorigin`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) response header. Normally such headers prevent embedding a web page in an `<iframe>` element, but X-Frame-Anywhere reflects an iframe's `src` value through multiple CORS proxies to circumvent this restriction.
