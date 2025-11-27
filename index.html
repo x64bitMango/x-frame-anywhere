@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Frame-Anywhere Demo</title>
+    <script src="index.js" defer></script>
+    <style>
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+        iframe {
+			display: block;
+			width: calc(100% - 40px);
+			height: 650px;
+			margin: 20px;
+            border-width: 3px; 
+            border-style: groove;
+		}
+    </style>
+</head>
+<body>
+    <center>
+    <iframe is="x-frame-anywhere" src="https://github.com/x64bitMango"></iframe>
+    </center>
+    <a href="https://github.com/x64bitMango/x-frame-anywhere"><img src="https://github.blog/wp-content/uploads/2008/12/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+</body>
+</html>
