@@ -12,11 +12,10 @@ X-Frame-Anywhere is a personal, rewritten fork of [Niutech's X-Frame-Bypass](htt
 > [!WARNING]
 > An iframe which has both `allow-scripts` and `allow-same-origin` (like the X-Frame-Anywhere iframes) sandbox values **can escape its sandboxing**. Only iframe secure content which is deemed safe! I doubt this warning will do anything but fall on deaf ears, though.
 
-For small scale demos, projects and hobby sites, you can source use the raw GitHub User Content directly. Please do **not** use that for large scale projects and/or deployments TwT.. but for the time being, a CDN package is still in the works, so feel free to temporarily rely on the raw Github User Content.
-
 ### **1. Include the X-Frame-Anywhere JS module:**
+From small scale demos, projects and blogs, to large scale dployments & projects, the use of the jsdelivr CDN package should be relied on.
    ```html
-   <script type="module" src="https://raw.githubusercontent.com/x64bitMango/x-frame-anywhere/refs/heads/main/x-frame-anywhere.js"></script>
+   <script type="module" src="https://cdn.jsdelivr.net/gh/x64bitMango/x-frame-anywhere/x-frame-anywhere.js"></script>
    ```
 ### **2. Insert the X-Frame-Anywhere Custom Element:**
    ```html
