@@ -22,7 +22,7 @@ This repository also serves as an unofficial extension of documentation for X-Fr
 ### **1. Include the X-Frame-Anywhere JS module:**
 From small scale demos, projects and blogs, to large scale deployments & projects, the use of the jsdelivr CDN package should be relied on.
    ```html
-   <script type="module" src="https://cdn.jsdelivr.net/gh/x64bitMango/x-frame-anywhere/x-frame-anywhere.js"></script>
+   <script type="module" src="https://cdn.jsdelivr.net/gh/x64bitMango/x-frame-anywhere/x-frame-anywhere.js" defer></script>
    ```
 ### **2. Insert the X-Frame-Anywhere Custom Element:**
    ```html
