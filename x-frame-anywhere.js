@@ -37,7 +37,28 @@ class x_frame_anywhere extends HTMLIFrameElement {
 		
 		this.debugLog('log', 'Loading URL:', url);
 
-		this.srcdoc = `<!DOCTYPE html><html><head></head><body>Loading...</body></html>`
+		this.srcdoc = `<!DOCTYPE html><html><head><style>
+			.loader {
+		position: absolute;
+		top: calc(50% - 25px);
+		left: calc(50% - 25px);
+		width: 50px;
+		height: 50px;
+		background-color: #333;
+		border-radius: 50%;  
+		animation: loader 1s infinite ease-in-out;
+	}
+	@keyframes loader {
+		0% {
+		transform: scale(0);
+		}
+		100% {
+		transform: scale(1);
+		opacity: 0;
+		}
+	}
+	</style>
+	</head><body><div class="loader"></div></body></html>`
 		this.fetchProxy(url, options, 0).then(res => res.text()).then(data => {
 			if (data) this.srcdoc = data.replace(/<head([^>]*)>/i, `<head$1> <base href="${url}">
 	<script>
