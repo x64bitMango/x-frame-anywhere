@@ -20,7 +20,7 @@ class x_frame_anywhere extends HTMLIFrameElement {
     connectedCallback () {
 
 		this.sandbox = '' + this.sandbox || 
-        `allow-downloads allow-storage-access-by-user-activation allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols` 
+        `allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols` 
     }
         /* 
         - defaulted to a very open sandbox-- almost a sandcastle
