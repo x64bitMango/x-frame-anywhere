@@ -28,7 +28,7 @@ From small scale demos, projects and blogs, to large scale deployments & project
    ```html
    <iframe is="x-frame-anywhere" src="https://example.org/"></iframe>
    ```
-   You can also include the `debug` attribute to enable debug logging.
+   You can also include the `debug` attribute to enable debug logging in the console.
    
    ```html
    <iframe is="x-frame-anywhere" debug src="https://example.org/"></iframe>
@@ -81,7 +81,7 @@ debugLog(level, ...args) {
 
 ### Q4: Comparing X-Frame-Anywhere with X-Frame-Bypass, should I prefer one over the other?
 
-**A**: **Well, it's really up to preference.** Either one works for most use-cases where you would want an **<iframe>** to circumvent x-frame restrictions due to CORS and/or x-frame policies. 
+**A**: **Well, it's really up to preference.** Either one works for most use-cases where you would want an `<iframe>` to circumvent x-frame restrictions due to CORS and/or x-frame policies. 
 
 **If you are to use this in active deployment, either one works perfectly fine.**
 
@@ -112,7 +112,7 @@ Table of X-Frame-Anywhere and X-Frame-Bypass and their access to the following i
 If `allow-popups` or `allow-top-navigation` are already specified in the sandbox attribute, as `allow-popups` is with both, `allow-top-navigation-to-custom-protocols` **becomes redundant** as those broader permissions already encompass the ability to navigate to custom protocols. 
 
 > [!NOTE]
-> Even with this redundancy, X-Frame-Anywhere still includes this value as `allow-popups` requires the opening of a new window to navigate to custom protocols, so X-Frame-Anywhere includes `allow-top-navigation-to-custom-protocols` to not require an extra window be open to navigate to custom protocols.
+> Even with this redundancy, X-Frame-Anywhere still includes `allow-top-navigation-to-custom-protocols` since `allow-popups` requires the opening of a new window to navigate to custom protocols. So to not require an extra window be open to navigate to custom protocols, this value is included.
 >
 > This is an experimental feature within X-Frame-Anywhere in it of itself so there is no guarantee for success of custom protocol navigation.
 
