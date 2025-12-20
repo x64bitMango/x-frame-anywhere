@@ -38,7 +38,7 @@ From small scale demos, projects and blogs, to large scale deployments & project
 
 As to the dismay of myself and everyone else wanting to bypass x-frame policies and restrictions, this is not a clear cut way of doing so, and is just a circumvention method which doesn't truly _iframe_ an element.
 
-Both X-Frame-Anywhere and X-Frame-Bypass scrape the HTML of the `src` URL using a CORS proxy to access and reflect the source HTML alongside forwarding all absolute URI requests through said CORS proxy. 
+Both X-Frame-Anywhere and X-Frame-Bypass scrape the HTML of the `src` URL using a CORS proxy to access and reflect the source HTML alongside through said CORS proxy. 
 
 ## Frequently asked Questions
 
@@ -47,7 +47,7 @@ Both X-Frame-Anywhere and X-Frame-Bypass scrape the HTML of the `src` URL using 
 
 At face value, they seem as if they're a magical quack remedy for iframe restrictions, but they are both very restrictive in what you can do with them, and cannot connect to any backend regarding PHP, backend persistent storage and the such. 
 
-Both x-frame bypassing resources act merely as mirrors of frontend code, and attempt to connect to backend through the use of CORS proxying, which work for the most part, but break at a point of services which require logging in and persistent backend information, while traditional iframes with correct CORS permissions run the iframed page's frontend and can connect to the backend because they have the permissive CORS and x-frame permissions which CORS proxies just can't mimic.
+Both x-frame bypassing resources act merely as mirrors of frontend code through a CORS proxy, which work for the most part, but break at a point of services which require logging in, or any backend interaction that's usually restricted because of CORS, while traditional iframes with correct CORS permissions run the iframed page's frontend and can connect to the backend because they have the permissive CORS and x-frame permissions which CORS proxies just can't mimic.
 
 ---
 
