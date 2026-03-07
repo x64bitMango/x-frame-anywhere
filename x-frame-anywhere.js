@@ -97,9 +97,9 @@ class x_frame_anywhere extends HTMLIFrameElement {
 
 	fetchProxy (url, options, i) {
 		const proxies = (options || {}).proxies || [
-			'https://corsproxy.io/?url='
+			'https://corsproxy.io/?url=',
 			'https://api.codetabs.com/v1/proxy/?quest=',
-            'https://api.cors.lol/?url=', // very weak rate limit
+            'https://api.cors.lol/?url=' // very weak rate limit
              // added cors.lol and corsproxy.io as extra fallback proxies for cors
 		]
 		this.debugLog('info', `Attempting Fetching URL via proxy ${i}: ${proxies[i]}${url}`);
