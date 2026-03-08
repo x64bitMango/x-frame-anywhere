@@ -19,10 +19,10 @@ class x_frame_anywhere extends HTMLIFrameElement {
 
     connectedCallback () {
 
-		this.sandbox = '' + this.sandbox ||
-        `allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols`
+		this.sandbox = '' + this.sandbox || 
+        `allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols` 
     }
-        /*
+        /* 
         - defaulted to a very open sandbox-- almost a sandcastle
         - allow-storage-access-by-user-activation isn't allowed in iframes by default so adding it here
         - allow-popups-to-escape-sandbox to allow links with target _blank to open new tabs
@@ -32,9 +32,9 @@ class x_frame_anywhere extends HTMLIFrameElement {
 
     load (url, options){
 		if (!url) return
-		if (!url.startsWith('http'))
+		if (!url.startsWith('http')) 
             throw new Error(`X-Frame-Anywhere src ${url} does not start with http(s)://`)
-
+		
 		this.debugLog('log', 'Loading URL:', url);
 
 		this.srcdoc = `<!DOCTYPE html><html><head><style>
@@ -45,7 +45,7 @@ class x_frame_anywhere extends HTMLIFrameElement {
 		width: 50px;
 		height: 50px;
 		background-color: #333;
-		border-radius: 50%;
+		border-radius: 50%;  
 		animation: loader 1s infinite ease-in-out;
 	}
 	@keyframes loader {
@@ -97,10 +97,11 @@ class x_frame_anywhere extends HTMLIFrameElement {
 
 	fetchProxy (url, options, i) {
 		const proxies = (options || {}).proxies || [
-			'https://corsproxy.io/?url=',
+			'https://api.allorigins.win/raw?url=',
 			'https://api.codetabs.com/v1/proxy/?quest=',
-            'https://api.cors.lol/?url=' // very weak rate limit
-             // added cors.lol and corsproxy.io as extra fallback proxies for cors
+			'https://cors-anywhere.herokuapp.com/',
+            'https://api.cors.lol/?url=', 
+            'https://corsproxy.io/?url=' // added cors.lol and corsproxy.io as extra fallback proxies for cors
 		]
 		this.debugLog('info', `Attempting Fetching URL via proxy ${i}: ${proxies[i]}${url}`);
 		return fetch(proxies[i] + encodeURIComponent(url), options).then(res => {
